@@ -1,0 +1,99 @@
+.titolosottotitolo {
+		font-size: 30pt;
+		position: fixed;
+}
+#titolo { 
+	background-color: white;
+	padding: 4px;
+	transform: rotate(15deg);
+}
+#titolo:hover{
+	padding: 15px;
+}
+
+
+#sottotitolo{
+	position: fixed;
+	right:5px;
+	bottom:10px;
+	background-color: white;
+	padding: 4px;
+	transform: rotate(30deg);
+}
+
+#sottotitolo:hover{
+	padding: 15px;
+}
+
+#descrizione{
+	position:fixed;
+	top: 20%;
+	left: 20%;
+	right: 20%;
+	bottom: 20%;
+	padding: 10px;
+	background-color: white;
+	display: none;
+	overflow: scroll;
+
+}
+
+	.base {
+		
+		font-size:20pt ;
+		text-align: center;
+		color: black;
+		position: center;
+		
+
+	}
+	.margineSchermoGrande{
+		padding-left: 15%;
+		padding-right: 15%;
+		
+	}
+
+	#imbuto1 {
+		
+	}
+	#imbuto2 {
+		
+			}
+
+@media screen and (max-width:768px) {
+	.base{
+		font-size: 9pt;
+	}
+	#descrizione{
+	top: 10%;
+	left: 10%;
+	right: 10%;
+	bottom: 10%;
+	padding: 10px;
+
+}
+
+
+}
+@media screen and (min-width:1200px) {
+	#container{
+		margin: auto;
+		width: 1100px;
+	}
+	#descrizione{
+		top: 15%;
+		right: 30%;
+		left: 30%;
+		right:30%;
+	}
+
+
+
+
+
+@media screen and (max-width:1000px) {
+	.base{
+		font-size: 15;
+	}
+
+}
