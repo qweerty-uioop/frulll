@@ -17,6 +17,10 @@
 	</div>
 
 <div id="descrizione">
+
+Un progetto di Camilla Formiconi, Cristina Licinio, Lu Liu, Raven Gio Masi, Federico Stoto e Chiara Vitale. 
+	<br><br>
+
 L’esperienza collettiva compone l’esistere quotidiano e arriverà ad esserlo in scala maggiore in un futuro prossimo. Ma la crescente tendenza al lavoro in “team”, spesso mediato dalle interfacce online, sembra essere inversamente proporzionale all’acquisizione delle competenze necessarie alla collaborazione, tanto che potremmo affermare con Richard Sennet che «la società moderna sta “dequalificando” le persone a praticare la collaborazione»(Insieme, Feltrinelli 2019, p.19). Questo accade perchè la collaborazione è più complessa e meno facile di quanto si vorrebbe credere e richiede per essere messa in pratica abilità tutt’altro che scontate, tra cui innanzitutto la capacità di prende le distanze sia da se stessi sia dal raggiungimento obbligato di uno scopo. Di tutte queste questioni il progetto “Frullare le estremità: un precipitato” e la storia della sua realizzazione sono risultati un inaspettato e potente catalizzatore. <br> 
 	Inizio, dal quale, eccezionalmente, non si ricava nulla: un gruppo di sei soggetti si trova a dover collaborare, pur non essendosi scelti reciprocamente, su un oggetto apparentemente lontano da loro nello spazio e nel tempo. È un altorilievo che rappresenta il mito induista del Frullamento dell’oceano di latte nello stile del tempio di Angkor Vat. Il mito racconta di un conflitto tra dei e antidei che si trasforma in un’intesa momentanea per il ritrovamento dell’amrita, l’elisir dell’immortalità. La loro collaborazione avviene tramite la realizzazione di un movimento condiviso: tirando dalle estremità un serpente arrotolato su una montagna, essa gira vorticosamente fino a frullare l’oceano e a liberare i doni del sensibile andati precedentemente perduti.
 	Come per destino lavorare su questo racconto di forze opposte stenta a partire e, quando parte, non crea altro che un vortice di disfunzionalità, incomprensioni e un’alternanza di stati di silenzio e prevaricazione. Sembra di essere di fronte a un fallimento sia relazionale che progettuale.<br>
@@ -264,7 +268,19 @@ senso<br>
 		let FattoreRestringimento1 =0.1; 
 
 
-		let valorePartenzaMargine2 = innerWidth/100*30;
+		let valorePartenzaMargine2 = window.outerWidth/100*30;
+
+function marginePortable(){
+	if (window.outerWidth<1200){
+		FattoreRestringimento1=0.03;
+	}
+};
+
+function margineFull(){
+	if (window.outerWidth>1200) {
+		valorePartenzaMargine2 = window.outerWidth/100*20;
+	}
+}
 		
 
 
@@ -314,7 +330,7 @@ function nascondi(IdElementoDaMostrare){
 }
 
 
-window.onload = margine2();clic();
+window.onload = margine2();clic();marginePortable();margineFull();
 		
 </script>
 </body>
