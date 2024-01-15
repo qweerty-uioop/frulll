@@ -35,6 +35,7 @@
 	background-color: white;
 	display: none;
 	overflow: scroll;
+	line-height: 1.2; 
 
 }
 
